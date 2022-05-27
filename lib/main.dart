@@ -15,49 +15,21 @@ void main() {
           )),
           backgroundColor: Colors.deepPurple,
         ),
-        body: DicePage(),
+        body: MagicBallPage(),
       ),
     ),
   );
 }
 
-// class DicePage extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Row(
-//         children: [
-//           Expanded(
-//             child: Padding(
-//               padding: const EdgeInsets.all(16.0),
-//               child: TextButton(
-//                 onPressed: () {},
-//                 child: Image.asset('images/dice1.png'),
-//               ),
-//             ),
-//           ),
-//           Expanded(
-//             child: Padding(
-//               padding: const EdgeInsets.all(16.0),
-//               child: TextButton(
-//                   onPressed: () {}, child: Image.asset('images/dice1.png')),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-class DicePage extends StatefulWidget {
+class MagicBallPage extends StatefulWidget {
   //widget item state can be changed
-  const DicePage({Key? key}) : super(key: key);
+  const MagicBallPage({Key? key}) : super(key: key);
 
   @override
-  State<DicePage> createState() => _DicePageState();
+  State<MagicBallPage> createState() => _MagicBallPage();
 }
 
-class _DicePageState extends State<DicePage> {
+class _MagicBallPage extends State<MagicBallPage> {
   int imgNumber = 1;
 
   void changeImage() {
@@ -69,7 +41,7 @@ class _DicePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
+      child: Column(
         children: [
           Expanded(
             child: Padding(
